@@ -1,0 +1,163 @@
+/* 🌐 Font & bază */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #b0c4de, #6a8fbf); /* tentă albastru închis */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container principal */
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #005fa3;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Secțiuni */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #005fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004080;
+}
+
+/* Card meteo */
+#weatherCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#weatherContainer img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Prognoză */
+#forecastContainer {
+  margin-top: 1rem;
+}
+
+.forecast-day {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.forecast-day:hover {
+  transform: scale(1.02);
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
+
+/* 🌙 Dark theme — Night Sky */
+.dark-theme {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* cer de noapte */
+  color: #e0f0ff;
+}
+
+.dark-theme header h1 {
+  color: #66ccff;
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme button {
+  background-color: #1c2b3a;
+  color: #e0f0ff;
+  border: 1px solid #445566;
+}
+
+.dark-theme #weatherCard,
+.dark-theme .forecast-day {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 0.5rem;
+  }
+}
+
+/* 🧾 Footer */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
